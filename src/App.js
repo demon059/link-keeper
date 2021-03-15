@@ -1,16 +1,20 @@
+// state
+import { useState, useEffect } from 'react'
+
+// router
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+// styles
+import './scss/link-keeper.scss'
+import './scss/button.scss'
+
 // components
 import Header from './components/Header'
 import Links from './components/Links'
 import Form from './components/Form'
 import Footer from './components/Footer'
 import Notice from './components/Notice'
-
-// state
-import { useState, useEffect } from 'react'
-
-// other
-import './scss/link-keeper.scss'
-import './scss/button.scss'
+import About from './views/About'
 
 const App = () => {
     const [links, setLinks] = useState([])
@@ -83,30 +87,44 @@ const App = () => {
     }
 
     return (
-        <div className='page-container'>
-            <div className='link-keeper__container'>
-                <Header
-                    title='Link keeper'
-                    enableFormAddLink={enableFormAddLink}
-                    onAdd={() => setEnableFormAddLink(!enableFormAddLink)}
-                />
-                {!enableFormAddLink && (
-                    <Links
-                        links={links}
-                        handleDeleteLink={handleDeleteLink}
-                        handleCopyLink={handleOnLinkForCopy}
-                        msgNotificate={msgNotificate}
+        <Router>
+            <div className='page-container'>
+                <div className='link-keeper__container'>
+                    <Header
+                        title='Link keeper'
+                        enableFormAddLink={enableFormAddLink}
+                        onAdd={() => setEnableFormAddLink(!enableFormAddLink)}
                     />
-                )}
-                {enableFormAddLink && <Form addLink={handleAddLink} />}
-                <Footer />
-                <Notice
-                    msg={msgNotificate}
-                    classNotice={classNotificate}
-                    enableNotificate={enableNotificate}
-                />
+
+                    <Route
+                        path='/'
+                        exact
+                        render={(props) => (
+                            <>
+                                {!enableFormAddLink && (
+                                    <Links
+                                        links={links}
+                                        handleDeleteLink={handleDeleteLink}
+                                        handleCopyLink={handleOnLinkForCopy}
+                                        msgNotificate={msgNotificate}
+                                    />
+                                )}
+                                {enableFormAddLink && (
+                                    <Form addLink={handleAddLink} />
+                                )}
+                                <Notice
+                                    msg={msgNotificate}
+                                    classNotice={classNotificate}
+                                    enableNotificate={enableNotificate}
+                                />
+                                <Footer />
+                            </>
+                        )}
+                    />
+                    <Route path='/about' component={About} />
+                </div>
             </div>
-        </div>
+        </Router>
     )
 }
 

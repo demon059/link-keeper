@@ -1,0 +1,24 @@
+.link-keeper__notification {
+    position: absolute;
+    bottom: 80px;
+    right: 50%;
+    transform: translate(50%, 0);
+    background: #dce8ef;
+    padding: 20px 30px;
+    font-size: 14px;
+    color: #528199;
+    border-radius: 20px;
+    box-shadow: 0px 18px 20px 0px rgba(0, 0, 0, 0.03);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 100ms linear;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.rose {
+        background-color: #e3e4fd;
+    }
+}

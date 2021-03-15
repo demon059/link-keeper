@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types'
 
+// styles
+import '../scss/components/Notice.scss'
+
 const Notice = ({ msg, enableNotificate, classNotice }) => {
     let className = 'link-keeper__notification '
     if (classNotice) {

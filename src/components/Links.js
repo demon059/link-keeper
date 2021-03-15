@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 // components
 import Link from './Link'
 
+// styles
+import '../scss/components/Links.scss'
+
 const Links = ({ links, handleDeleteLink, handleCopyLink, msgNotificate }) => {
     return (
         <div className='link-keeper__list'>

@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types'
 
-// other
+// icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
+// styles
+import '../scss/components/Link.scss'
 
 const Link = ({ link, handleDeleteLink, handleCopyLink }) => {
     const onClick = (e, id) => {

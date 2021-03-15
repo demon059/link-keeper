@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 // state
 import { useState } from 'react'
 
+// styles
+import '../scss/components/Form.scss'
+
 const Form = ({ addLink }) => {
     const [title, setTitle] = useState('')
     const [link, setLink] = useState('')
