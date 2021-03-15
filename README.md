@@ -7,7 +7,7 @@ This application is my first test development on React.js.
 npm install
 ```
 
-## Steps for start
+### Compiles and hot-reloads for development
 First of need run json-server
 ```
 npm run server
