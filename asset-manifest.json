@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/link-keeper/static/css/main.dc0b9971.chunk.css",
+    "main.css": "/link-keeper/static/css/main.fe0e5eb7.chunk.css",
     "main.js": "/link-keeper/static/js/main.79dce921.chunk.js",
     "main.js.map": "/link-keeper/static/js/main.79dce921.chunk.js.map",
     "runtime-main.js": "/link-keeper/static/js/runtime-main.47c16e17.js",
@@ -10,13 +10,13 @@
     "static/js/3.66114880.chunk.js": "/link-keeper/static/js/3.66114880.chunk.js",
     "static/js/3.66114880.chunk.js.map": "/link-keeper/static/js/3.66114880.chunk.js.map",
     "index.html": "/link-keeper/index.html",
-    "static/css/main.dc0b9971.chunk.css.map": "/link-keeper/static/css/main.dc0b9971.chunk.css.map",
+    "static/css/main.fe0e5eb7.chunk.css.map": "/link-keeper/static/css/main.fe0e5eb7.chunk.css.map",
     "static/js/2.7cd1393f.chunk.js.LICENSE.txt": "/link-keeper/static/js/2.7cd1393f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.47c16e17.js",
     "static/js/2.7cd1393f.chunk.js",
-    "static/css/main.dc0b9971.chunk.css",
+    "static/css/main.fe0e5eb7.chunk.css",
     "static/js/main.79dce921.chunk.js"
   ]
 }
