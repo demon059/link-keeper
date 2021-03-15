@@ -1,0 +1,74 @@
+.btn {
+    border-radius: 40px;
+    padding: 13px 25px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    transition: 0.1s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.add {
+        font: 400 25px 'Montserrat Alternates', sans-serif;
+
+        @media (max-width: 480px) {
+            font: 400 16px 'Montserrat Alternates', sans-serif;
+        }
+    }
+
+    &.orange {
+        background-color: #ff844b;
+        box-shadow: 0 5px 15px -5px rgba(#ff844b, 0.8);
+        color: white;
+
+        svg {
+            transform: rotate(90deg);
+            transition: transform 100ms linear;
+        }
+    }
+
+    &.orange-200 {
+        background-color: rgba(#ff844b, 0.2);
+        color: #ff844b;
+    }
+
+    &.red {
+        background-color: #e23737;
+        box-shadow: 0 5px 15px -5px rgba(#e23737, 0.8);
+        color: white;
+
+        svg {
+            transform: rotate(45deg);
+            transition: transform 100ms linear;
+        }
+    }
+
+    &.blue-200 {
+        background-color: rgba(#518099, 0.2);
+        color: #2d3e5f;
+    }
+
+    &.icon {
+        svg {
+            font-size: 30px;
+            margin-left: -12px;
+            margin-right: 10px;
+
+            @media (max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &.circle {
+        height: 45px;
+        width: 45px;
+        font-size: 16px;
+        padding: 0;
+    }
+}
