@@ -1,3 +1,3 @@
 # Link-keeper
 
-This application is my first test development on react.
+This application is my first test development on React.js.
