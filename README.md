@@ -16,3 +16,7 @@ Second step is finish step - start application
 ```
 npm start
 ```
+### Compiles and minifies for production
+```
+npm run build
+```
