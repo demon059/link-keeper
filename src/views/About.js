@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const About = (props) => {
     return (
         <div className='link-keeper__content'>
-            <Link to='/'>Go back</Link>
+            <Link to='/link-keeper'>Go back</Link>
             <p>
                 <strong>Link-keeper</strong> was created to demonstrate basic
                 React.js skills that was got in short amount of time.

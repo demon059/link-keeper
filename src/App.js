@@ -1,5 +1,5 @@
 // state
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 // router
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -17,53 +17,80 @@ import Notice from './components/Notice'
 import About from './views/About'
 
 const App = () => {
-    const [links, setLinks] = useState([])
+    const [links, setLinks] = useState([
+        {
+            title: 'Link-keeper',
+            link: 'https://github.com/demon059/link-keeper',
+            desc: 'My first app on React.js',
+            id: 1,
+        },
+        {
+            title: 'mylnikovdmitriy.ru',
+            link: 'http://mylnikovdmitriy.ru/',
+            desc: 'Site one developer ',
+            id: 2,
+        },
+        {
+            title: 'shico.fun',
+            link: 'https://shico.fun/',
+            desc:
+                'This is a platform for online events for example online meetings or online quiz or whatever.',
+            id: 3,
+        },
+        {
+            title: 'CV one developer',
+            link:
+                'https://perm.hh.ru/resume/d8c99ed5ff08b3a40c0039ed1f6c3669546171',
+            desc: '',
+            id: 4,
+        },
+    ])
     const [enableFormAddLink, setEnableFormAddLink] = useState(false)
     const [enableNotificate, setEnableNotificate] = useState(false)
     const [msgNotificate, setMsgNotificate] = useState('')
     const [classNotificate, setClassNotificate] = useState('')
 
-    useEffect(() => {
-        const getLinks = async () => {
-            const linksFromServer = await fetchLinks()
-            setLinks(linksFromServer)
-        }
-        getLinks()
-    }, [])
+    // useEffect(() => {
+    //     const getLinks = async () => {
+    //         const linksFromServer = await fetchLinks()
+    //         setLinks(linksFromServer)
+    //     }
+    //     getLinks()
+    // }, [])
 
     // Fetch links
-    const fetchLinks = async () => {
-        const res = await fetch('http://localhost:5000/links')
-        const data = await res.json()
+    // const fetchLinks = async () => {
+    //     const res = await fetch('http://localhost:5000/links')
+    //     const data = await res.json()
 
-        return data
-    }
+    //     return data
+    // }
 
     // Delete link
     const handleDeleteLink = async (id) => {
         const conf = window.confirm('Do you really want to remove the link?')
         if (conf) {
-            await fetch(`http://localhost:5000/links/${id}`, {
-                method: 'DELETE',
-            })
+            // await fetch(`http://localhost:5000/links/${id}`, {
+            //     method: 'DELETE',
+            // })
             setLinks(links.filter((item) => item.id !== id))
         }
     }
 
     // Add link
-    const handleAddLink = async (link) => {
+    const handleAddLink = (link) => {
         setEnableNotificate(false)
-        const res = await fetch('http://localhost:5000/links', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(link),
-        })
+        // const res = await fetch('http://localhost:5000/links', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(link),
+        // })
 
-        const data = await res.json()
+        // const data = await res.json()
 
-        setLinks([...links, data])
+        setLinks([...links, link])
 
         setClassNotificate('rose')
         setMsgNotificate('Link added!')
@@ -97,7 +124,7 @@ const App = () => {
                     />
 
                     <Route
-                        path='/'
+                        path='/link-keeper'
                         exact
                         render={(props) => (
                             <>
