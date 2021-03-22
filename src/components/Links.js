@@ -8,7 +8,7 @@ import '../scss/components/Links.scss'
 
 const Links = ({ links, handleDeleteLink, handleCopyLink, msgNotificate }) => {
     return (
-        <div className='link-keeper__list'>
+        <section className='link-keeper__list'>
             {links.length > 0 ? (
                 <div className='link-keeper__list-outside'>
                     <div className='link-keeper__list-inside'>
@@ -25,7 +25,7 @@ const Links = ({ links, handleDeleteLink, handleCopyLink, msgNotificate }) => {
             ) : (
                 <div className='link-keeper__list-empty'>No links :(</div>
             )}
-        </div>
+        </section>
     )
 }
 

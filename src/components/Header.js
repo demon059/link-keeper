@@ -22,19 +22,17 @@ const Header = ({ title, onAdd, enableFormAddLink }) => {
     const location = useLocation()
 
     return (
-        <header>
-            <div className='link-keeper__header'>
-                <h1>
-                    <FontAwesomeIcon icon={faLink} /> {title}
-                    <small>Just click on white box for copy</small>
-                </h1>
-                {location.pathname === '/' && (
-                    <button className={className} onClick={onAdd}>
-                        <FontAwesomeIcon icon={faPlusCircle} />
-                        {enableFormAddLink ? 'Close' : 'Add'}
-                    </button>
-                )}
-            </div>
+        <header className='link-keeper__header'>
+            <h1>
+                <FontAwesomeIcon icon={faLink} /> {title}
+                <small>Just click on white box for copy</small>
+            </h1>
+            {location.pathname === '/' && (
+                <button className={className} onClick={onAdd}>
+                    <FontAwesomeIcon icon={faPlusCircle} />
+                    {enableFormAddLink ? 'Close' : 'Add'}
+                </button>
+            )}
         </header>
     )
 }

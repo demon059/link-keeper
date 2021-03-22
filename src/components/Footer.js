@@ -6,9 +6,9 @@ import '../scss/components/Footer.scss'
 
 const Footer = (props) => {
     return (
-        <div className='link-keeper__footer'>
+        <footer className='link-keeper__footer'>
             <Link to='/about'>About</Link>
-        </div>
+        </footer>
     )
 }
 
