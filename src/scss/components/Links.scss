@@ -2,6 +2,10 @@
     flex: 1;
     overflow: hidden;
 
+    @media (max-width: 767px) {
+        padding: 0 15px;
+    }
+
     &-empty {
         height: 100%;
         align-items: center;
@@ -12,17 +16,17 @@
     }
 
     &-outside {
-        width: calc(100% + 20px);
         height: 100%;
-        padding-right: 0px;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        overflow: auto;
+
+        @media (max-height: 1024px), (max-width: 767px) {
+            width: 100%;
+        }
     }
 
     &-inside {
         width: 100%;
         margin: 0 0px;
-        padding-right: 17px;
         padding-bottom: 30px;
     }
 }
