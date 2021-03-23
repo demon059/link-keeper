@@ -27,7 +27,7 @@ const Header = ({ title, onAdd, enableFormAddLink }) => {
                 <FontAwesomeIcon icon={faLink} /> {title}
                 <small>Just click on white box for copy</small>
             </h1>
-            {location.pathname === '/link-keeper' && (
+            {location.pathname === '/link-keeper/' && (
                 <button className={className} onClick={onAdd}>
                     <FontAwesomeIcon icon={faPlusCircle} />
                     {enableFormAddLink ? 'Close' : 'Add'}
