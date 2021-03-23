@@ -1,6 +1,7 @@
 .link-keeper__form {
     flex: 1;
-    padding: 0 10px;
+    padding: 0 15px;
+    overflow: auto;
 
     &-control {
         display: flex;
